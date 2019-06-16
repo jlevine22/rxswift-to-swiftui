@@ -7,17 +7,34 @@
 //
 
 import SwiftUI
+import RxSwift
 
 struct ContentView : View {
+    @ObjectBinding var someInt: ObservableBindableObject<Int>
+    @EnvironmentObject var dataStore: Bound<DataStore>
     var body: some View {
-        Text("Hello World")
+        VStack {
+            Text("Hello World \(someInt.value)")
+            Button(action: {
+                self.dataStore.value.increment()
+            }) {
+                Text("Increment")
+            }
+            Button(action: {
+                self.dataStore.value.decrement()
+            }) {
+                Text("Decrement")
+            }
+        }
+        
     }
 }
 
 #if DEBUG
 struct ContentView_Previews : PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(someInt: ObservableBindableObject(Observable.just(123)))
+        .environmentObject(Bound(DataStore()))
     }
 }
 #endif
