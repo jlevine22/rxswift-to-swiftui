@@ -10,7 +10,7 @@ import SwiftUI
 import RxSwift
 
 struct ContentView : View {
-    @ObjectBinding var someInt: ObservableBindableObject<Int>
+    @ObjectBinding var someInt: Bound<Int>
     @EnvironmentObject var dataStore: Bound<DataStore>
     var body: some View {
         VStack {
@@ -35,7 +35,7 @@ public let dataStore = DataStore()
 
 struct ContentView_Previews : PreviewProvider {
     static var previews: some View {
-        ContentView(someInt: dataStore.someInt.asBindableObject())
+        ContentView(someInt: dataStore.someInt.asBindableObject(initialValue: 0))
             .environmentObject(Bound(dataStore))
     }
 }

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3300C21822B5CAB8009493BB /* Bound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3300C21722B5CAB8009493BB /* Bound.swift */; };
-		3300C21A22B5CF76009493BB /* ObservableBindableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3300C21922B5CF76009493BB /* ObservableBindableObject.swift */; };
 		33968E5522AD71690044926B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33968E5422AD71690044926B /* AppDelegate.swift */; };
 		33968E5722AD71690044926B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33968E5622AD71690044926B /* SceneDelegate.swift */; };
 		33968E5922AD71690044926B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33968E5822AD71690044926B /* ContentView.swift */; };
@@ -23,7 +22,6 @@
 
 /* Begin PBXFileReference section */
 		3300C21722B5CAB8009493BB /* Bound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bound.swift; sourceTree = "<group>"; };
-		3300C21922B5CF76009493BB /* ObservableBindableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableBindableObject.swift; sourceTree = "<group>"; };
 		33968E5122AD71690044926B /* Observable to BindableObject Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Observable to BindableObject Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		33968E5422AD71690044926B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33968E5622AD71690044926B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,7 +75,6 @@
 				33968E5C22AD716B0044926B /* Preview Content */,
 				33968E6F22AD72EB0044926B /* DataStore.swift */,
 				3300C21722B5CAB8009493BB /* Bound.swift */,
-				3300C21922B5CF76009493BB /* ObservableBindableObject.swift */,
 			);
 			path = "Observable to BindableObject Test";
 			sourceTree = "<group>";
@@ -169,7 +166,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3300C21A22B5CF76009493BB /* ObservableBindableObject.swift in Sources */,
 				33968E5522AD71690044926B /* AppDelegate.swift in Sources */,
 				33968E7022AD72EB0044926B /* DataStore.swift in Sources */,
 				33968E5722AD71690044926B /* SceneDelegate.swift in Sources */,

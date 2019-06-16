@@ -9,8 +9,11 @@
 import Foundation
 import SwiftUI
 import Combine
+import RxSwift
 
 class Bound<Value>: BindableObject {
+    let bag = DisposeBag()
+
     var value: Value {
         didSet {
             didChange.send(value)
@@ -20,4 +23,12 @@ class Bound<Value>: BindableObject {
     let didChange = PassthroughSubject<Value, Never>()
     
     init(_ value: Value) { self.value = value }
+}
+
+extension Observable {
+    func asBindableObject(initialValue: Element) -> Bound<Element> {
+        let bound = Bound(initialValue)
+        subscribe(onNext: { [weak bound] in bound?.value = $0 }).disposed(by: bound.bag)
+        return bound
+    }
 }

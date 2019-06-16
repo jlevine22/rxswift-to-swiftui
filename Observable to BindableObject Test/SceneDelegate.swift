@@ -21,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         // Use a UIHostingController as window root view controller
         let window = UIWindow(frame: UIScreen.main.bounds)
-        let someInt = dataStore.someInt.asBindableObject()
+        let someInt = dataStore.someInt.asBindableObject(initialValue: 0)
         let contentView = ContentView(someInt: someInt).environmentObject(Bound(dataStore))
         window.rootViewController = UIHostingController(rootView: contentView)
         self.window = window
