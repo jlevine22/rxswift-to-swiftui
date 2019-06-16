@@ -11,8 +11,8 @@ import RxSwift
 import SwiftUI
 import Combine
 
-class DataStore {
-    let someInt: Observable<Int>
+public class DataStore {
+    public let someInt: Observable<Int>
 
     private let _someInt = BehaviorSubject<Int>(value: 0)
     
@@ -20,12 +20,12 @@ class DataStore {
         someInt = _someInt.asObservable()
     }
 
-    func increment() {
+    public func increment() {
         let current = try! _someInt.value()
         _someInt.onNext(current + 1)
     }
     
-    func decrement() {
+    public func decrement() {
         let current = try! _someInt.value()
         _someInt.onNext(max(current - 1, 0))
     }

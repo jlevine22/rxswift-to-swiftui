@@ -9,6 +9,7 @@
 import Foundation
 import SwiftUI
 import Combine
+import RxSwift
 
 class ObservableBindableObject<Element>: BindableObject {
     let bag = DisposeBag()

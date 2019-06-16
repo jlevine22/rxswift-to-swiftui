@@ -31,10 +31,12 @@ struct ContentView : View {
 }
 
 #if DEBUG
+public let dataStore = DataStore()
+
 struct ContentView_Previews : PreviewProvider {
     static var previews: some View {
-        ContentView(someInt: ObservableBindableObject(Observable.just(123)))
-        .environmentObject(Bound(DataStore()))
+        ContentView(someInt: dataStore.someInt.asBindableObject())
+            .environmentObject(Bound(dataStore))
     }
 }
 #endif
